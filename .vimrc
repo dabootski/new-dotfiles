@@ -5,6 +5,9 @@ colors Tomorrow-Night
 
 set mouse=n
 
+" Prevent text that I just pasted over from replacing text in default register
+"vnoremap p "_dP
+
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode

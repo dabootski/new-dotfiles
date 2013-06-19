@@ -7,6 +7,8 @@ alias l="ls -ahlG"
 # Turn on Vi-mode
 set -o vi
 
+bind "set completion-ignore-case on"
+
 # Vi-mode disables control-l screen clearing, this enables it
 bind -m vi-insert "\C-l":clear-screen
 

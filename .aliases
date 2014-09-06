@@ -49,7 +49,7 @@ alias pxml="curl \'$1\' | xmllint --format"
 alias wwid="history | tail -n 20"
 
 # Load my private aliases (SSH shortcuts, etc)
-source ~/.private-aliases
+[[ -f "~/.private-aliases" ]] && source ~/.private-aliases
 
 # Torrents
 alias ator="scp $@ jasonbucki@94.242.209.86:/home/hd1/jasonbucki/torrents/watch"

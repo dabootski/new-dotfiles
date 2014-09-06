@@ -1,7 +1,7 @@
 call pathogen#infect()
 call pathogen#helptags()
 
-colors Tomorrow-Night
+colors Tomorrow-Night-Bright
 
 set mouse=n
 
@@ -82,7 +82,7 @@ filetype plugin indent on
 
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
+"let g:syntastic_quiet_warnings=1
 
 " Use modeline overrides
 " NOTE: I don't know what this does...
@@ -124,4 +124,31 @@ set guifont=Monaco:h13
 map <leader>F :Ack 
 let g:ctrlp_map = '<c-f>'
 let g:ctrlp_cmd = 'CtrlPCurWD'
+
+" Airline status line config (https://github.com/bling/vim-airline)
+let g:airline_theme='simple'
+
+"folding settings (yanked from http://smartic.us/2009/04/06/code-folding-in-vim/)
+"set foldmethod=indent   "fold based on indent
+"set foldnestmax=10      "deepest fold is 10 levels
+"set nofoldenable        "dont fold by default
+"set foldlevel=1         "this is just what i use
+
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
+
+let @d='0VyPf"vi"r*Vyjp'
+
+" Using Tidy HTML5 instead of standard Tidy HTML
+let g:syntastic_html_tidy_exec="/Users/jasonbucki/.vim/bin/tidy-html5/bin/tidy"
+let g:syntastic_html_tidy_ignore_errors=[
+  \"<ion-",
+  \"</ion-",
+  \" proprietary attribute \"animation",
+  \" proprietary attribute \"ng-",
+  \"trimming empty <button>",
+  \"trimming empty <i>",
+  \"'<' + '/' + letter not allowed here",
+  \"plain text isn't allowed in <head> elements"
+\]
 

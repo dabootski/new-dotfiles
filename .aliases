@@ -5,7 +5,7 @@ alias eb="vim ~/.bash_profile" # edit bash profile
 alias sb="source ~/.bash_profile" # source bash profile
 
 # Vagrant
-alias vagrant="rvm use ruby-1.9.3-p194 && vagrant ${@}"
+alias vagrant="vagrant ${@}"
 alias vssh="vagrant up && vagrant ssh"
 alias vreload="vagrant reload && vagrant ssh"
 alias vhalt="vagrant halt"
@@ -51,3 +51,24 @@ alias wwid="history | tail -n 20"
 # Load my private aliases (SSH shortcuts, etc)
 source ~/.private-aliases
 
+# Torrents
+alias ator="scp $@ jasonbucki@94.242.209.86:/home/hd1/jasonbucki/torrents/watch"
+alias dtor="scp jasonbucki@94.242.209.86:/home/hd1/jasonbucki/torrents/completed/$1 ~/Downloads"
+
+# Copies all Cucumber ".feature" files to another directory as text files
+alias ccukes="ruby ~/bin/copy_cukes.rb"
+
+# Project-specific notes
+alias sc-note="vim ~/Documents/work/sullivan_cotter/$1"
+
+#===============================================
+# Raspberry Pi helpers (prepend all with "pi_")
+#===============================================
+
+# View IP address of Raspberry Pi (actually all IPs) on local network
+alias pi_ip="ifconfig | grep broadcast"
+
+# Change to project directories
+alias cdep="cd /Users/jasonbucki/projects/work/energyprint"
+alias vimep="cd /Users/jasonbucki/projects/work/energyprint && vim"
+alias vsshep="cd /Users/jasonbucki/projects/work/energyprint && vssh"

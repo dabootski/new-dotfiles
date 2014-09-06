@@ -3,6 +3,9 @@ call pathogen#helptags()
 
 colors Tomorrow-Night-Bright
 
+" Prevents entering Ex mode
+nnoremap Q <nop>
+
 set mouse=n
 
 nnoremap <F2> :set invpaste paste?<CR>

@@ -1,13 +1,18 @@
 .CFUserTextEncoding
 .Trash
 .bash_history
+.boot2docker
 .config
 .private-aliases
 .rbenv
 .rnd
 .ssh
 .subversion
+.vagrant
+.vagrant.d
 .viminfo
+.vim/swapfiles
+Applications
 Desktop
 Documents
 Downloads
@@ -15,4 +20,6 @@ Library
 Movies
 Music
 Pictures
+projects
 Public
+VirtualBox VMs

@@ -1,15 +1,13 @@
 call pathogen#infect()
 call pathogen#helptags()
 
-colors Tomorrow-Night
+colors Tomorrow-Night-Bright
 
 set mouse=n
 
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
-
-set backupdir=~/.swapfiles
 
 set t_Co=256
 set nocompatible
@@ -79,7 +77,7 @@ filetype plugin indent on
 
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
+"let g:syntastic_quiet_warnings=1
 
 " Use modeline overrides
 " NOTE: I don't know what this does...
@@ -121,4 +119,22 @@ set guifont=Monaco:h13
 map <leader>F :Ack 
 let g:ctrlp_map = '<c-f>'
 let g:ctrlp_cmd = 'CtrlPCurWD'
+
+let @d='0VyPf"vi"r*Vyjp'
+
+" Airline status line config (https://github.com/bling/vim-airline)
+let g:airline_theme='simple'
+
+" Using Tidy HTML5 instead of standard Tidy HTML
+let g:syntastic_html_tidy_exec="/Users/jasonbucki/.vim/bin/tidy-html5/bin/tidy"
+let g:syntastic_html_tidy_ignore_errors=[
+  \"<ion-",
+  \"</ion-",
+  \" proprietary attribute \"animation",
+  \" proprietary attribute \"ng-",
+  \"trimming empty <button>",
+  \"trimming empty <i>",
+  \"'<' + '/' + letter not allowed here",
+  \"plain text isn't allowed in <head> elements"
+\]
 

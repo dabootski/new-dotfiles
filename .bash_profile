@@ -1,28 +1,40 @@
+echo "Loading .bash_profile"
+
 export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ '
 CLICOLOR=1
 LSCOLORS=gxfxcxdxbxegedabagacad
 
+#
+# Shell config
+#
 alias l="ls -ahlG"
 
-# Turn on Vi-mode
-set -o vi
+source ~/.aliases # Load aliases file
 
-# Vi-mode disables control-l screen clearing, this enables it
-bind -m vi-insert "\C-l":clear-screen
+set -o vi # Turn on Vi-mode
 
-# Store lots of history
-export HISTSIZE=100000
+bind -m vi-insert "\C-l":clear-screen # Vi-mode disables control-l screen clearing, this enables it
+
+export HISTSIZE=100000 # Store lots of history
 
 export PATH=/usr/local/bin:$PATH
 
+bind "set completion-ignore-case on"
+
+#
 # Java
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_07.jdk"
-export PATH="/Library/Java/JavaVirtualMachines/jdk1.7.0_07.jdk/Contents/Home/bin":$PATH
+#
+#export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_07.jdk"
+#export PATH="/Library/Java/JavaVirtualMachines/jdk1.7.0_07.jdk/Contents/Home/bin":$PATH
 
-# Play Framework
-export PATH=$PATH:"/Users/jasonbucki/src/play-2.0.3"
-
+#
 # RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-source ~/.aliases
+#
+# Git
+#
+# Enable git auto-complete. Also see ~/git-completion.bash file.
+source ~/git-completion.bash
+

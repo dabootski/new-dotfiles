@@ -1,0 +1,6 @@
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[user]
+	name = Jason Bucki
+	email = jasonbucki@gmail.com

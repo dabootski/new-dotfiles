@@ -6,6 +6,11 @@ alias apa="vim ~/.private-aliases && source ~/.bash_profile" # Add a private ali
 alias eb="vim ~/.bash_profile" # edit bash profile
 alias sb="source ~/.bash_profile" # source bash profile
 alias l="ls -ahlG"
+alias foo="echo bar"
+
+# Docker
+alias dc="docker-compose ${@}"
+alias dcrails="docker-compose run web rails ${@}"
 
 # Vagrant
 alias vagrant="vagrant ${@}"
@@ -28,8 +33,11 @@ alias gst="git status"
 alias gc="git commit -m $1"
 alias gco="git checkout $1"
 alias gcm="git checkout master"
+alias gcd="git checkout develop"
 alias gp="git push $1 $2"
 alias gpom="git push origin master"
+
+alias ngrok="/Applications/ngrok"
 
 alias pxml="curl \'$1\' | xmllint --format"
 

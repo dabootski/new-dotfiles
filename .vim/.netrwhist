@@ -1,4 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/usr/local/etc/bash_completion.d'
 let g:netrw_dirhist_2='/Users/jasonbucki/projects/work/presentations/celluloid'
+let g:netrw_dirhist_3='/Users/jasonbucki/projects/work/aero-zone-admin'
+let g:netrw_dirhist_4='/Users/jasonbucki/projects/work/aero-zone-admin/.git'
+let g:netrw_dirhist_5='/Users/jasonbucki/Desktop/ROs to be removed from Outbound Dashboard'

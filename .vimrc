@@ -88,8 +88,8 @@ set modeline
 set modelines=10
 
 " Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/swapfiles
+" set backupdir=~/.vim/backup
+" set directory=~/.vim/swapfiles
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
